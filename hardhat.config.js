@@ -4,7 +4,7 @@ require("@nomicfoundation/hardhat-toolbox");
 module.exports = {
   //sample just for trial 
   defaultNetwork : "hardhat",
-  //allowUnlimitedContractSize: true,
+  
   networks : {
     hardhat : {
       chainId : 1337
@@ -15,6 +15,7 @@ module.exports = {
 
   solidity: {
     version : "0.8.9", 
+    allowUnlimitedContractSize: true,
     settings : {
       optimizer : {
         enabled : true, 
