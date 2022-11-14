@@ -87,7 +87,7 @@ contract Company is ERC1155 {
     }
 
     function givingPoints(string memory toWho, uint amount)public {
-       
+        
         require(mainContract.customerNames(toWho) > 0); 
         require(msg.sender == owner); 
         address customerAdd = mainContract.showCustomer(toWho).customerAddress;
@@ -127,7 +127,7 @@ contract Company is ERC1155 {
         require(msg.sender == owner); 
         TokenEarn[] memory myTokens = new TokenEarn[](_tokenCount.current());
         for (uint i = 0; i < myTokens.length; i++) {
-            myTokens[i] = allTokens[i];
+            myTokens[i] = allTokens[i];   
         }
         return myTokens;
     }
